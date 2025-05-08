@@ -87,6 +87,7 @@
       left: 1rem;
       background-color: transparent;
       z-index: var(--z-fixed);
+      
   }
   
   .nav{
@@ -99,7 +100,12 @@
       
   }
   
- 
+ .nav__logo{
+      
+      font-weight: var(--font-bold);
+      font-family: var(--body-font);
+      color: var(--black-color);
+  }
   
   .nav__toggle,
   .nav__close{
