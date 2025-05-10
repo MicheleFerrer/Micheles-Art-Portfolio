@@ -189,23 +189,30 @@ body {
 
 .swiper {
   width: 100%;
-height: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0;
+ height: 100%;
+  min-width: 300px;
+  margin: 1rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  margin: auto;
+}
 
 .home-title{
   margin-top: 100px;
   margin-bottom: 2rem;
-  
-  gap: 20px;
+ justify-content: space-between;
+  align-items: center;
   text-align: center;
 }
+
 
 .home {
   display: flex;
@@ -223,14 +230,13 @@ height: 100%;
 
 .home__subtitle{
   font-size: var(--h3-font-size);
-  margin-bottom: .5rem;
   font-style: italic;
 }
 
 .home__title{
   font-size: var(--biggest-font-size);
   align-items: center;
-  margin-bottom: rem;
+  margin-bottom: 2rem;
   font-weight: var(--font-bold);
   max-width: 500px;
   
@@ -258,64 +264,24 @@ height: 100%;
   transition: transform .4s ease-in-out;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #222222;
-  cursor: pointer;
-  width: 30%;
-  font-size: 10px;
-  opacity: 0.5;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  min-height: 70%;
-  position: absolute; /* Ensure buttons stay positioned relative to the swiper */
-  top: 50%; /* Center vertically */
-   /* Ensure buttons are above the swiper content */
+
+
+
+
+
+/*=============== SWIPER ===============*/
+
+.swiper-pagination {
+  background-color: #000;
+  opacity: 1;
+  
 }
 
-.swiper-button-next:hover {
-  color: #000;
-  cursor: pointer;
-  width: 30%;
-  font-size: 10px;
-  transition: all .4s ease-in-out;
-  transform: translatex(5px);
-  opacity: 0.9;
-}
-.swiper-button-prev:hover {
-  color: #000;
-  cursor: pointer;
-  width: 30%;
-  font-size: 10px;
-  transition: all .4s ease-in-out;
-  transform: translatex(-5px);
-  opacity: 0.9;
-}
-
-
-
-
-.swiper-pagination-bullet {
-  background: #000;
-}
-.swiper-pagination-bullet-active{
-  opacity:0.7;
+.swiper-pagination-bullet-active {
+  opacity: 1;
   background-color: var(--black-color);
   transition: all .4s ease-in-out;
 }
-
-.swiper-pagination-bullet:hover{
-  opacity:0.6;
-  background-color: var(--black-color);
-  transition: all .15s ease-in-out;
-  transform: translatey(-2px);
-      animation-delay: 0.2ms;
-  animation-duration: 0.3ms;
-}
-
-
-
 
 .swiper-wrapper {
   display: flex;
@@ -342,7 +308,7 @@ height: 100%;
   
 }
 
-.swiper-slide:hover {
+.swiper-slide:hover img {
   transform: scale(1.1);
   filter: contrast(1.2);
   filter: brightness(1.05);
@@ -355,32 +321,33 @@ height: 100%;
 .swiper-slide img:hover{
   image-rendering: optimizeQuality;
   image-resolution: high;
+  border-radius: 10px;
   
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
-    border-radius: 10px;
-    image-rendering: optimizeQuality;
-    padding: 0;
+  border-radius: 10px;
+  image-rendering: optimizeQuality;
+  padding: 0;
   image-resolution: high;
 
 }
 
 .swiper-slide {
-width: 80%;
+width: 100%;
 }
 
 .swiper-slide:nth-child(2n) {
-width: 60%;
+width: 80%;
 margin-inline-end: 50px;
 align-self: center;
 align-content: center;}
 
 .swiper-slide:nth-child(3n) {
-width: 50%;
-margin-inline-end: 100px;
+width: 60%;
+margin-inline-end: 60px;
 align-self: center;
 align-content: center;
 

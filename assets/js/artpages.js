@@ -34,18 +34,16 @@ document.addEventListener('DOMContentLoaded', function () {
  
 });
 
-//--Initialize Swiper -->
-    
-        var swiper = new Swiper(".swiper", {
-            slidesPerView: "auto",
-            spaceBetween: 30,
-
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-
-        });
+// Swiper initialization with pagination
+const swiper = new Swiper('.swiper-container', {
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+      bulletClass: 'swiper-pagination-bullet',
+      bulletActiveClass: 'swiper-pagination-bullet-active',
+    },
+    // Other configurations
+  });
 
 
    
